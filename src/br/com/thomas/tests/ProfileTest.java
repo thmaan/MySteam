@@ -1,4 +1,4 @@
-package br.com.thomas.testes;
+package br.com.thomas.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -39,6 +39,15 @@ class ProfileTest {
 		this.lastplayed = leagueOfLegends;
 		
 		this.p = new Profile("th", "Thomas", "Canoinhas", "Brazil", "logo", mygames, myfriends, leagueOfLegends, 7.0);
+	}
+	@Test
+	void allTest() {
+		String[] entrada = {"Thomas","Lucas","Xubileu","MENINO"};
+		assertAll("profiles",
+			() -> assertEquals(entrada[0], p.getName()),
+			() -> assertEquals(entrada[1], p.getName()),
+			() -> assertEquals(entrada[2], p.getName()), 
+			() -> assertEquals(entrada[3], p.getName()));
 	}
 	@BeforeAll
 	public static void increaseWallet() {

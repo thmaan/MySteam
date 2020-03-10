@@ -1,4 +1,4 @@
-package br.com.thomas.testes;
+package br.com.thomas.tests;
 
 import java.util.concurrent.TimeUnit;
 
